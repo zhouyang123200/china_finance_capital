@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="china_finance_capital.list">
+      <field name="name">china_finance_capital list</field>
+      <field name="model">china_finance_capital.china_finance_capital</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="china_finance_capital.action_window">
+      <field name="name">china_finance_capital window</field>
+      <field name="res_model">china_finance_capital.china_finance_capital</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="china_finance_capital.action_server">
+      <field name="name">china_finance_capital server</field>
+      <field name="model_id" ref="model_china_finance_capital_china_finance_capital"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="china_finance_capital" id="china_finance_capital.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="china_finance_capital.menu_1" parent="china_finance_capital.menu_root"/>
+    <menuitem name="Menu 2" id="china_finance_capital.menu_2" parent="china_finance_capital.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="china_finance_capital.menu_1_list" parent="china_finance_capital.menu_1"
+              action="china_finance_capital.action_window"/>
+    <menuitem name="Server to list" id="china_finance_capital" parent="china_finance_capital.menu_2"
+              action="china_finance_capital.action_server"/>
+-->
+  </data>
+</odoo>
