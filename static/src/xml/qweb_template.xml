@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="FieldNumCapital">
+        <table>
+            <tr>
+                <th>亿</th>
+                <th>千万</th>
+                <th>百万</th>
+                <th>十万</th>
+                <th>万</th>
+                <th>千</th>
+                <th>百</th>
+                <th>十</th>
+                <th>个</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </t>
+</templates>

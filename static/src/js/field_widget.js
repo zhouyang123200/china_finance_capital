@@ -3,6 +3,8 @@ odoo.define('china_finance_capital.num_capital', function (require) {
 
     var AbstractField = require('web.AbstractField');
     var fieldRegistry = require('web.field_registry');
+    var core = require('web.core');
+    var qweb = core.qweb;
 
     var numCapitalField = AbstractField.extend({
         className: 'int_finance_capital',
@@ -22,9 +24,8 @@ odoo.define('china_finance_capital.num_capital', function (require) {
 
         _renderReadonly: function () {
             this.$el.empty();
-            this.$el = $("<input type='text' disable/>");
-            this.$el.addClass('o_input');
-            this.$el.val(this.value);
+            var tables = qweb.render('FieldNumCapital', {widget: this});
+            this.$el.append(tables)
         },
 
         _getValue: function () {
