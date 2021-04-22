@@ -7,7 +7,7 @@ odoo.define('china_finance_capital.num_capital', function (require) {
     var qweb = core.qweb;
 
     var numCapitalField = AbstractField.extend({
-        className: 'int_finance_capital',
+        className: 'num_capital',
         tagName: 'span',
         supportedFieldTypes: ['integer'],
 
@@ -24,8 +24,18 @@ odoo.define('china_finance_capital.num_capital', function (require) {
 
         _renderReadonly: function () {
             this.$el.empty();
-            var tables = qweb.render('FieldNumCapital', {widget: this});
-            this.$el.append(tables)
+            var table = qweb.render('FieldNumCapital', {widget: this});
+            var nums = this.value.toString();
+
+            var tr = $('<tr><tr>');
+            for (var i=9 - nums.length; i > 0; i--)
+                tr.append($('<td></td>'));
+            for (var i=nums.length - 1; i >= 0; i--)
+                tr.append($('<td></td>').text(nums[i]));
+
+            table = $(table).append(tr);
+
+            this.$el.append(table);
         },
 
         _getValue: function () {
